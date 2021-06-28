@@ -9,4 +9,4 @@ def get_companies():
   return json.dumps(employees)
 
 if __name__ == '__main__':
-    api.run(host="172.17.0.2")
+    api.run(host="{IP}")
