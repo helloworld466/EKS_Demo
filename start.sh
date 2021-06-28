@@ -1,2 +1,2 @@
 #!/bin/bash
-python /app/flask.py
+python /app/sample.py
