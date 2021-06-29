@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customerdetails
+  namespace: imo
+  labels:
+    app: details
+spec:
+  template:
+    metadata:
+      labels:
+        app: details
+    spec:
+      containers:
+      - name: details
+        image: akshaybadri/python:v1
+        ports:
+        - containerPort: 5000
+        resources:
+          limits:
+            memory: "128Mi"
+          requests:
+            memory: "64Mi"
+  selector:
+    matchLabels:
+      app: details
+  replicas: 2
